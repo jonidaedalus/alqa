@@ -1,0 +1,41 @@
+openapi: "3.0.3"
+info:
+  title: "alqa_monorepo API"
+  description: "alqa_monorepo API"
+  version: "1.0.0"
+servers:
+- url: "https://alqa_monorepo"
+paths:
+  /json/kotlinx-serialization:
+    get:
+      description: ""
+      responses:
+        "200":
+          description: "OK"
+          content:
+            '*/*':
+              schema:
+                type: "string"
+  /metrics-micrometer:
+    get:
+      description: ""
+      responses:
+        "200":
+          description: "OK"
+          content:
+            '*/*':
+              schema:
+                type: "string"
+  /:
+    get:
+      description: ""
+      responses:
+        "200":
+          description: "OK"
+          content:
+            text/plain:
+              schema:
+                type: "string"
+              examples:
+                Example#1:
+                  value: "Hello World!"
